@@ -1,0 +1,11 @@
+@startuml integratedP2P
+package "Production hubs" {
+  [HUB 1\n MMS]
+  [HUB 2\n MMS]
+}
+
+
+[HUB 1\n MMS] .-> [User 1] 
+[HUB 1\n MMS] .-> [User 2] : Subscription
+[HUB 2\n MMS] .-> [User 2] 
+@enduml
