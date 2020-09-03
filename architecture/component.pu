@@ -18,7 +18,7 @@ Container_Boundary(api, "mmsd") {
 
     Rel(core, mb, "Reads commands from private channel")
     Rel(core, pes, "Stores events")
-    Rel(mb, core, "Publishes events")
+    Rel(core, mb, "Publishes events")
     Rel(restapi, core, "Fetches data")
 }
 
