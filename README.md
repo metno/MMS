@@ -1,12 +1,13 @@
 # MMS
 Documentation of the Met Messaging System, most of the documentation is on the Wiki (https://github.com/metno/MMS/wiki)
 
-## Architecture
+## Architecture (C4)
 
 ### Context
 ![Context diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/integratedP2P.pu)
 
 ### Container
+#### Production Hub
 ![Container diagram for Production Hub](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/productionHub.pu)
 
 
