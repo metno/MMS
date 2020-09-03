@@ -10,6 +10,8 @@ Documentation of the Met Messaging System, most of the documentation is on the W
 #### Production Hub
 ![Container diagram for Production Hub](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/productionHub.pu)
 
+### Component
+![Component diagram for MMS Daemon (mmsd)](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/component.pu)
 
 ## MMS-clients
 
