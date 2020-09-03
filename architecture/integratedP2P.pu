@@ -1,0 +1,19 @@
+@startuml integratedP2P
+!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Context.puml
+
+LAYOUT_LEFT_RIGHT
+
+Person(product_maintainer, "Product maintainer")
+
+System(production_hub, "Production Hub"," ")
+
+Person(subscriber_1,"External user")
+System(subscriber_2,"Production hub")
+System(metadata_catalogue, "Metadata catalogue")
+
+Rel(product_maintainer, production_hub, "Maintains products and configures metadata")
+Rel(production_hub,subscriber_1, "Gets notified when product is posted")
+Rel(production_hub,subscriber_2, "Triggers event for further Processing")
+Rel(production_hub,metadata_catalogue, "Starts metadata collection")
+
+@enduml
