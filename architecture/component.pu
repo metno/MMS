@@ -1,14 +1,15 @@
 @startuml
-!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/master/C4_Component.puml
+!include<C4/C4_Component>
 
-'LAYOUT_WITH_LEGEND
+'LAYOUT_WITH_LEGEND()
+'left to right direction
 
 title Component diagram for mmsd
 
 ' perhaps better suited for Container diagram: Container(wm, "Workflow manager", "ecFlow, ProRad, ...", "Lets people construct processing pipelines")
-Container(mms, "Client App", "go-mms", "Provides a user interface to the MMS system")
 System_Ext(subscriber, "Consumer of ProductionHub events", "Subscribes to events from the production hub")
 System_Ext(ms, "Monitoring system", "Gathers metrics")
+Container(mms, "Client App", "go-mms", "Provides a user interface to the MMS system")
 
 Container_Boundary(api, "mmsd") {
     Component(mb, "Message Broker", "NATS", "Allows clients to subscribe to events and client apps to communicate with mmsd.")
