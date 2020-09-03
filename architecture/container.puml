@@ -1,27 +1,24 @@
 @startuml productionHub
-!includeurl https://raw.githubusercontent.com/RicardoNiepel/C4-PlantUML/release/1-0/C4_Container.puml
+!include <C4/C4_Container>
+!include <office/Users/user.puml>
 
-LAYOUT_LEFT_RIGHT
+LAYOUT_WITH_LEGEND()
+'LAYOUT_LEFT_RIGHT
 
-Person(product_maintainer, "Product maintainer")
+Person(product_maintainer, "<$user> \n Product maintainer")
 
 System_Boundary(production_hub, "Production Hub") {
-    Container(wfm,"Workflow Manager","i.e ecflow, prorad","Producer of products")
-    Container(mms,"Met Messaging System","Go","Posts cloudevent about production")
-    Container(daemon, "Daemon","NATS, SQLlite")
+    Container(wm,"Workflow Manager","e.g. ecFlow, ProRad","Producer of products")
+    Container(mmsd,"mmsd","Go","MMS Daemon, core, REST API, persistent message store, NATS")
+    'Container(mb, "Message broker","NATS")
 }
 
-Person(subscriber_1,"External user")
-System(subscriber_2,"Production hub")
-System(metadata_catalogue, "Metadata catalogue")
+System(production_hub_2,"Another Production Hub")
+System(another_system, "Another Sytem")
 
-
-Rel(wfm,mms,"Calls on production finish","python-wrapper, cli")
-Rel(mms,daemon,"Post to message queue","NATS private")
-Rel(daemon,subscriber_1,"Send message through subscription","NATS public")
-Rel(product_maintainer, wfm, "Maintains products and configures metadata","Workflow Manager")
-Rel(daemon,subscriber_2,"Sends/set flag event for other Production Hub","NATS public")
-Rel(daemon,wfm, "Sends/set flag event for further Processing","NATS public")
-Rel(daemon,metadata_catalogue, "Notifies metadata collection tool","NATS public")
+Rel(wm,mmsd,"Registers products when finished","python-wrapper, cli")
+Rel(product_maintainer, wm, "Maintains products and configures metadata","Workflow Manager")
+Rel(another_system, mmsd, "Subscribes to events")
+Rel(production_hub_2, mmsd, "Subscribes to events")
 
 @enduml

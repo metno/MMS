@@ -6,7 +6,6 @@
 
 title Component diagram for mmsd
 
-' perhaps better suited for Container diagram: Container(wm, "Workflow manager", "ecFlow, ProRad, ...", "Lets people construct processing pipelines")
 System_Ext(subscriber, "Consumer of ProductionHub events", "Subscribes to events from the production hub")
 System_Ext(ms, "Monitoring system", "Gathers metrics")
 Container(mms, "Client App", "go-mms", "Provides a user interface to the MMS system")
