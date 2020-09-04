@@ -1,0 +1,33 @@
+@startuml
+!include <C4/C4_Component>
+!include <office/Users/user.puml>
+
+title Code Diagram for MMS
+
+Person(User, "<$user>\nPython User")
+
+Container_Boundary(py, "py-mms") {
+
+    Component(PyMMS, "PyMMS", "Python Object", "Python MMS Package")
+    Component(GoMMS, "GoMMS", "Python Object", "Go library wrapper")
+    Component(Config, "Config", "Python Object", "PyMMS persistent config")
+
+    Rel(PyMMS, GoMMS, "Internal")
+    Rel(Config, PyMMS, "Internal")
+
+}
+
+Container_Boundary(go, "go-mms") {
+
+    Component(cmd, "Command line interface", "Internal", "")
+    Component(mms, "Met Messaging System", "CloudEvent", "")
+    Component(libmms, "MMS Shared Object", "C interface", "")
+
+    Rel(cmd, mms, "CLI to MMS.")
+    Rel(libmms, mms, "Lib to MMS")
+}
+
+Rel(User, PyMMS, "Script")
+Rel(GoMMS, libmms, "Python to Go interface")
+
+@enduml
