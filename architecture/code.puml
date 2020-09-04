@@ -4,30 +4,51 @@
 
 title Code Diagram for MMS
 
-Person(User, "<$user>\nPython User")
+System_Ext(user, "Python Script")
 
-Container_Boundary(py, "py-mms") {
+Container_Boundary(py-mms, "py-mms") {
 
-    Component(PyMMS, "PyMMS", "Python Object", "Python MMS Package")
-    Component(GoMMS, "GoMMS", "Python Object", "Go library wrapper")
-    Component(Config, "Config", "Python Object", "PyMMS persistent config")
+    Component(PyMMS, "PyMMS", "Python class", "Python MMS Package")
+    Component(GoMMS, "GoMMS", "Python class", "Go library wrapper")
+    Component(Config, "Config", "Python class", "PyMMS persistent config")
 
     Rel(PyMMS, GoMMS, "Internal")
     Rel(Config, PyMMS, "Internal")
 
 }
 
-Container_Boundary(go, "go-mms") {
+Container_Boundary(go-mms, "go-mms") {
 
-    Component(cmd, "Command line interface", "Internal", "")
-    Component(mms, "Met Messaging System", "CloudEvent", "")
-    Component(libmms, "MMS Shared Object", "C interface", "")
+    Container_Boundary(go-mms-cmd, "cmd") {
+        Component(cmdmms, "cmd/mms", "Go", "Command line interface")
+        Component(cmdmmsd, "cmd/mmsd", "Go", "MMS daemon")
+    }
+    Container_Boundary(go-mms-pkg, "pkg") {
+        Component(pkgmms, "pkg/mms", "Go", "Met Messaging System")
+        Component(pkgmeta, "pkg/metaservice", "Go", "")
+        Component(pkgmiddle, "pkg/middleware", "Go", "")
+    }
+    Container_Boundary(go-mms-internal, "internal") {
+        Component(intapi, "api", "Go", "")
+    }
+    Container_Boundary(go-mms-export, "export") {
+        Component(libmms, "libmms.so", "Go", "MMS shared object")
+    }
 
-    Rel(cmd, mms, "CLI to MMS.")
-    Rel(libmms, mms, "Lib to MMS")
+    Rel(cmdmms, pkgmms, "CLI to MMS")
+
+    Rel(cmdmmsd, intapi, "")
+
+    Rel(libmms, pkgmms, "Lib to MMS")
+
+    Rel(pkgmeta, pkgmms, "")
+
+    Rel(intapi, pkgmms, "")
+    Rel(intapi, pkgmeta, "")
+    Rel(intapi, pkgmiddle, "")
 }
 
-Rel(User, PyMMS, "Script")
-Rel(GoMMS, libmms, "Python to Go interface")
+Rel(user, PyMMS, "import pymms")
+Rel(GoMMS, libmms, "Python-Go interface")
 
 @enduml
