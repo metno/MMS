@@ -1,5 +1,5 @@
 # MMS
-Documentation of the Met Messaging System, most of the documentation is on the Wiki (https://github.com/metno/MMS/wiki)
+Documentation of the Met Messaging System. Most of the documentation is on the Wiki (https://github.com/metno/MMS/wiki)
 
 ## Terminology
 ### Production hub
@@ -21,7 +21,7 @@ A process providing metadata about the production hub it represents.
 ### Component
 ![Component diagram for MMS Daemon (mmsd)](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/metno/MMS/master/architecture/component.puml)
 
-## MMS-clients
+## MMS clients
 
-The main program is written in go, found at https://github.com/metno/go-mms.
-Also under development is a python-client at  https://github.com/metno/py-mms.
+The main program is written in Go, found at https://github.com/metno/go-mms.
+Also under development is a Python client at https://github.com/metno/py-mms.
