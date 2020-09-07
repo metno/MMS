@@ -3,7 +3,7 @@
 !include<office/Users/user.puml>
 
 LAYOUT_WITH_LEGEND()
-left to right direction
+' left to right direction
 
 title Code Diagram for Client App
 
