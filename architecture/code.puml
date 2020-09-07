@@ -1,15 +1,19 @@
 @startuml
-!include <C4/C4_Component>
-!include <office/Users/user.puml>
+!include<C4/C4_Component>
+!include<office/Users/user.puml>
 
-title Code Diagram for MMS
+LAYOUT_WITH_LEGEND()
+left to right direction
+
+title Code Diagram for Client App
 
 System_Ext(user, "Python Script")
+System_Ext(cli, "Command Line")
 
 Container_Boundary(py-mms, "py-mms") {
 
     Component(PyMMS, "PyMMS", "Python class", "Python MMS Package")
-    Component(GoMMS, "GoMMS", "Python class", "Go library wrapper")
+    Component(GoMMS, "GoMMS", "Python class", "Go library wrapper using Python ctypes")
     Component(Config, "Config", "Python class", "PyMMS persistent config")
 
     Rel(PyMMS, GoMMS, "Internal")
@@ -49,6 +53,7 @@ Container_Boundary(go-mms, "go-mms") {
 }
 
 Rel(user, PyMMS, "import pymms")
-Rel(GoMMS, libmms, "Python-Go interface")
+Rel(cli, cmdmms, "")
+Rel(GoMMS, libmms, "Python-Go interface", "JSON")
 
 @enduml
