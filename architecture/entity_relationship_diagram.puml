@@ -14,7 +14,7 @@ Documentation: url
 
 entity CloudEvent {
 * ID: string <<generated>>
-* Source: ProductionHub
+* Source: ProductionHub (e.g. https://ppi-node.met.no:1234/about)
 * Type: string (e.g. no.met.Product.created.v1)
 * Subject: string 
 }
