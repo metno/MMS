@@ -2,8 +2,7 @@
 !include <C4/C4_Container>
 !include <office/Users/user.puml>
 
-LAYOUT_WITH_LEGEND()
-'LAYOUT_LEFT_RIGHT
+LAYOUT_LEFT_RIGHT
 
 Person(product_maintainer, "<$user> \n Product maintainer")
 

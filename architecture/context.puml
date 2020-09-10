@@ -2,21 +2,15 @@
 !include <C4/C4_Context>
 !include <office/Users/user.puml>
 
-LAYOUT_WITH_LEGEND()
-'LAYOUT_LEFT_RIGHT
-
 Person(product_maintainer, "<$user> \n Product maintainer")
-Person(product_maintainer_2, "<$user> \n Product maintainer")
 
 System(production_hub, "Production Hub","e.g. NWP ecFlow on PPI")
 
-System(production_hub_2,"Production Hub", "e.g. product generation ecFlow on PPI")
-System(vis, "Visualisation UI / Data Service")
+System_Ext(vis, "Visualisation UI / Data Service")
+System_Ext(ppi, "PPI")
 
-Rel(product_maintainer_2, production_hub_2, "Maintains products and configures metadata")
 Rel(product_maintainer, production_hub, "Maintains products and configures metadata")
 Rel(vis, production_hub, "Subscribes to product events")
-Rel(vis, production_hub_2, "Subscribes to product events")
-Rel(production_hub_2, production_hub, "Subscribes to ecFlow events")
+Rel(production_hub, ppi, "Runs on")
 
 @enduml
