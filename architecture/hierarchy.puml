@@ -1,0 +1,33 @@
+@startuml hierarchy
+hide circle
+
+
+
+class Production_Hub {
++Identifier: Source (i.e. ecflow.arome_arctic)
++MMSd: API for subscriber to hook into
+Hosts the MMS-daemon for client interaction
+}
+
+class Product_Type {
++Identifier: Subject (i.e. arome_arctic_2_5km.nc)
+Each type of product produced at a production hub (continuation of productstatus-"slugs")
+}
+
+class Product_Event{
++Identifier: ValidTime (i.e. 20200908T00Z)
++Alternate_Identifier: Producer:Source:Subject+ValidTime (i.e. ecflow/arome_arctic/arome_arctic_full_2_5km_20200908T00Z.nc)
++Path: Location on disk (i.e /lustre/storeA/project/metproduction/products/arome_arctic/arome_arctic_full_2_5km_20200908T00Z.nc) 
++UUID: Unique atleast for Producer:Source Maintained by the production hub
+}
+
+Production_Hub --> Product_Type : Maintains
+
+Product_Type --> Product_Event : New instance of Product_Type
+
+
+@enduml
+
+
+
+

@@ -25,3 +25,8 @@ A process providing metadata about the production hub it represents.
 
 The main program is written in Go, found at https://github.com/metno/go-mms.
 Also under development is a Python client at https://github.com/metno/py-mms.
+
+
+## Hierarchy
+
+![Hierarchical sketch for products](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/metno/MMS/master/architecture/hierarchy.puml)
