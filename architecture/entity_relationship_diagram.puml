@@ -1,0 +1,36 @@
+@startuml entity_relationship_diagram
+
+' avoid problems with angled crows feet
+' ref. https://plantuml.com/ie-diagram
+skinparam linetype ortho
+
+entity "ProductionHub (About class in go-mms)" as ProductionHub {
+* Name: string
+Description: text
+Responsible: text
+TermsOfService: url
+Documentation: url
+}
+
+entity CloudEvent {
+* ID: string <<generated>>
+* Source: ProductionHub
+* Type: string (e.g. no.met.Product.created.v1)
+* Subject: string 
+}
+
+entity ProductEvent {
+* Product: string
+* ProductionHub: string
+* CreatedAt: datetime <<generated>>
+* ProductLocation: path 
+}
+
+ProductionHub --o{ ProductEvent
+CloudEvent ||--o| ProductEvent
+
+@enduml
+
+
+
+
