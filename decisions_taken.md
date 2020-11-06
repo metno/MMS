@@ -1,8 +1,13 @@
-# Command line framework
+# Decisions Taken
+
+[ [Back to README](README.md) ]
+
+## Command line framework
+
 We pick urfave/cli as a framework due to simpler design. If needed we can switch to spf13/cobra when we see the need, there are some good arguments for using it:
 https://www.reddit.com/r/golang/comments/5sdvoh/what_is_the_essential_difference_between/
 
-# Command line syntax
+## Command line syntax
 
 We pick nr. 1 (redis inspired) as it is explicit and gives least complexity of possible combinations.
 

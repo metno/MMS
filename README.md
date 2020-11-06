@@ -1,8 +1,17 @@
 # MMS
-Documentation of the Met Messaging System. Most of the documentation is on the Wiki (https://github.com/metno/MMS/wiki)
+Documentation of the Met Messaging System.
+
+**See Also:**
+
+* [Terminology](terminology.md)
+* [Messages](messages.md)
+* [Client Commands](client_commands.md)
+* [Decisions Taken](decisions_taken.md)
 
 ## Terminology
+
 ### Production hub
+
 A unit that has the capacity to run custom code to process data and provide metadata, metrics and emits messages about events. An example is an instance of ecFlow accompanied by
 an mmsd (MMS daemon).
 
@@ -15,6 +24,7 @@ A process providing metadata about the production hub it represents.
 ![Context diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/metno/MMS/master/architecture/context.puml)
 
 ### Container
+
 #### Production Hub
 ![Container diagram for Production Hub](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/metno/MMS/master/architecture/container.puml)
 
