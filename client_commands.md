@@ -1,4 +1,4 @@
-# Client COmmands
+# Client Commands
 
 [ [Back to README](README.md) ]
 
