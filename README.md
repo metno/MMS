@@ -7,15 +7,17 @@ Documentation of the Met Messaging System.
 * [Messages](messages.md)
 * [Client Commands](client_commands.md)
 * [Decisions Taken](decisions_taken.md)
+* [Coding Conventions](conventions.md)
 
 ## Terminology
 
-### Production hub
+### Production Hub
 
-A unit that has the capacity to run custom code to process data and provide metadata, metrics and emits messages about events. An example is an instance of ecFlow accompanied by
-an mmsd (MMS daemon).
+A unit that has the capacity to run custom code to process data and provide metadata, metrics and emits messages about events.
+An example is an instance of ecFlow accompanied by an mmsd (MMS daemon).
 
 ### mmsd
+
 A process providing metadata about the production hub it represents.
 
 ## Architecture (C4)
@@ -35,7 +37,7 @@ A process providing metadata about the production hub it represents.
 ![Code diagram for pyMMS](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/metno/MMS/master/architecture/code.puml)
 
 
-## MMS clients
+## MMS Clients
 
 The main program is written in Go, found at https://github.com/metno/go-mms.
 Also under development is a Python client at https://github.com/metno/py-mms.
