@@ -1,4 +1,5 @@
-# MMS
+<img src="mms.png" width="256">
+
 Documentation of the Met Messaging System.
 
 **See Also:**
