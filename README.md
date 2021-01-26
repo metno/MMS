@@ -28,8 +28,11 @@ A process providing metadata about the production hub it represents.
 
 ### Container
 
-#### Production Hub
-![Container diagram for Production Hub](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/container.puml)
+#### Container diagram for Production Hub
+<img src="export/architecture/container/productionHub.svg">
+
+<!-- The Plantuml proxy gives an error for this one as of 2020-01, replacing it with an inline svg. --!>
+<!-- ![Container diagram for Production Hub](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/container.puml) -->
 
 ### Component
 ![Component diagram for MMS Daemon (mmsd)](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/component.puml)
