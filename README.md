@@ -37,10 +37,6 @@ A process providing metadata about the production hub it represents.
 ### Component
 ![Component diagram for MMS Daemon (mmsd)](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/component.puml)
 
-### Code for py-mms
-![Code diagram for pyMMS](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/code.puml)
-
-
 ## MMS Clients
 
 The main program is written in Go, found at https://github.com/metno/go-mms.
