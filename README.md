@@ -14,28 +14,26 @@ Documentation of the Met Messaging System.
 
 ### Production Hub
 
-A unit that has the capacity to run custom code to process data and provide metadata, metrics and emits messages about events.
-An example is an instance of ecFlow accompanied by an mmsd (MMS daemon).
+A unit that has the capacity to run custom code to process data generate metadata and post information about it to MMS
+An example is a VM producing files, ecFlow instance or rcron job.
 
-### mmsd
+### mmsd 
+<img src="mmsd.png"  width="100">
 
-A process providing metadata about the production hub it represents.
+A process providing REST interface to submit product information, status and metrics.
 
 ## Architecture (C4)
 
+To address operational limitations, different architecture has originally been used, see [Legacy Architecture](legacy.md)
+
 ### Context
-![Context diagram](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/context.puml)
+<img src="export/architecture/context.svg">
 
 ### Container
-
-#### Container diagram for Production Hub
-<img src="export/architecture/container/productionHub.svg">
-
-<!-- The Plantuml proxy gives an error for this one as of 2020-01, replacing it with an inline svg. --!>
-<!-- ![Container diagram for Production Hub](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/container.puml) -->
+<img src="export/architecture/container.svg">
 
 ### Component
-![Component diagram for MMS Daemon (mmsd)](http://www.plantuml.com/plantuml/proxy?src=https://raw.githubusercontent.com/metno/MMS/master/architecture/component.puml)
+<img src="export/architecture/component.svg">
 
 ## MMS Clients
 

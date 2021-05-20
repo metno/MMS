@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="810px" preserveAspectRatio="none" style="width:961px;height:810px;background:#FFFFFF;" version="1.1" viewBox="0 0 961 810" width="961px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="sans-serif" font-size="18" lengthAdjust="spacing" textLength="382" x="283.25" y="17.4023">MMS Legacy Component diagram for mmsd</text><!--MD5=[7442f3b126ee602ae02566c1a49e158a]
+cluster api--><rect fill="#FFFFFF" height="614" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="497" x="228.5" y="190.1992"/><text fill="#FFFFFF" font-family="sans-serif" font-size="6" font-style="italic" lengthAdjust="spacing" textLength="34" x="460" y="198">«boundary»</text><text fill="#444444" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="52" x="451" y="217.668">mmsd</text><text fill="#444444" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="63" x="445.5" y="232.6445">[Container]</text><!--MD5=[7c31de3ec12a3935d139f388f86a067b]
+entity mb--><rect fill="#85BBF0" height="133.0625" style="stroke:#78A8D8;stroke-width:1.5;" width="212" x="497.5" y="655.1992"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="565.5" y="676.8008">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="129" x="539" y="694.8008">Message Broker</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="584" y="709.7773">[NATS]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="605.5" y="725.8438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="181" x="513" y="742.332">Allows clients to subscribe</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188" x="507.5" y="758.8203">to events and client apps to</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="516" y="775.3086">communicate with mmsd.</text><!--MD5=[41a5e5d14dbe26e3211a369e067a6cfa]
+entity pes--><rect fill="#85BBF0" height="116.5742" style="stroke:#78A8D8;stroke-width:1.5;" width="217" x="245" y="663.1992"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="315.5" y="684.8008">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="197" x="255" y="702.8008">Persistent Event Storage</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="39" x="334" y="717.7773">[sqlite]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="355.5" y="733.8438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="142" x="282.5" y="750.332">Provides a persistent</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="148" x="279.5" y="766.8203">storage for all events.</text><!--MD5=[0e5f98baa840e754fdd7a7ea1973139b]
+entity restapi--><rect fill="#85BBF0" height="116.5742" style="stroke:#78A8D8;stroke-width:1.5;" width="199" x="314" y="251.1992"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="375.5" y="272.8008">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="73" x="377" y="290.8008">REST API</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="390.5" y="305.7773">[golang]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="415.5" y="321.8438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="171" x="328" y="338.332">Provides functionality for</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="169" x="329" y="354.8203">/about, /healthz, /status</text><!--MD5=[0d482ad21d5c7c11aa976e45da5ecfe6]
+entity core--><rect fill="#85BBF0" height="116.5742" style="stroke:#78A8D8;stroke-width:1.5;" width="153" x="337" y="446.1992"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="76" x="375.5" y="467.8008">«component»</text><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="35" x="396" y="485.8008">core</text><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="46" x="390.5" y="500.7773">[golang]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="415.5" y="516.8438"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="125" x="351" y="533.332">Provides logic and</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="347" y="549.8203">connection control.</text><!--MD5=[fa62c61fd4ec39767f3e8f6fa5a04d76]
+entity subscriber--><rect fill="#999999" height="121.2852" style="stroke:#8A8A8A;stroke-width:1.5;" width="205" x="7" y="444.1992"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="105" x="57" y="465.8008">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="106" x="54" y="483.8008">Consumer of</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="182" x="18.5" y="502.6445">ProductionHub events</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="111.5" y="519.5547"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="177" x="21" y="536.043">Subscribes to events from</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="133" x="43" y="552.5313">the production hub</text><!--MD5=[c5d11c0b53c10b1d2c1bf834d35d74f9]
+entity ms--><rect fill="#999999" height="85.9531" style="stroke:#8A8A8A;stroke-width:1.5;" width="174" x="326.5" y="28.1992"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="105" x="361" y="49.8008">«external_system»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="154" x="336.5" y="67.8008">Monitoring system</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="415.5" y="84.7109"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="362" y="101.1992">Gathers metrics</text><!--MD5=[ea64c9112f0e458f26ce80c96c2cc1e7]
+entity mms--><rect fill="#438DD5" height="116.5742" style="stroke:#3C7FC0;stroke-width:1.5;" width="214" x="741.5" y="446.1992"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="65" x="816" y="467.8008">«container»</text><text fill="#FFFFFF" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="86" x="805.5" y="485.8008">Client App</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="57" x="820" y="500.7773">[go-mms]</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="0" x="850.5" y="516.8438"/><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="186" x="755.5" y="533.332">Provides a user interface to</text><text fill="#FFFFFF" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="794" y="549.8203">the MMS system</text><!--MD5=[c9bddb77505cc4308445871031c1d236]
+link core to mb--><path d="M489.09,563.3392 C500.48,573.4192 511.69,584.2092 521.5,595.1992 C535.81,611.2292 549.41,629.9692 561.28,647.9992 " fill="none" id="core-to-mb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="565.91,655.1392,564.0717,646.7953,559.0386,650.0615,565.91,655.1392" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="143" x="545.5" y="607.8008">Reads commands from</text><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="95" x="571.5" y="621.9336">private channel</text><!--MD5=[c9bddb77505cc4308445871031c1d236]
+link core to mb--><path d="M396.26,563.3692 C393.38,584.3792 394.53,607.3292 406.5,625.1992 C426.03,654.3392 447.73,640.3192 479.5,655.1992 C482.97,656.8192 486.48,658.4992 490.02,660.1992 " fill="none" id="core-to-mb-1" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="497.3,663.7592,491.4266,657.5541,488.7948,662.9461,497.3,663.7592" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="105" x="407.5" y="614.8008">Publishes events</text><!--MD5=[b3747997a41ae1a220ad883871273b52]
+link core to pes--><path d="M336.82,541.4792 C316.06,555.1692 296.13,572.9792 284.5,595.1992 C274.03,615.1992 279.67,636.7992 291.3,656.3492 " fill="none" id="core-to-pes" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="295.65,663.1692,293.878,654.811,288.8191,658.0371,295.65,663.1692" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="84" x="285.5" y="614.8008">Stores events</text><!--MD5=[523239f101243df431c8a58b784b5588]
+link restapi to core--><path d="M413.5,368.3392 C413.5,390.2092 413.5,415.2592 413.5,437.8292 " fill="none" id="restapi-to-core" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="413.5,446.0192,416.5,438.0192,410.5,438.0192,413.5,446.0192" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="78" x="414.5" y="410.8008">Fetches data</text><!--MD5=[a10c5d8f58739e283fe978d25fe9cfb1]
+link mms to mb--><path d="M782.84,563.3192 C752.68,589.7892 716.61,621.4392 684.75,649.3992 " fill="none" id="mms-to-mb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="678.44,654.9392,686.4295,651.9115,682.4687,647.4046,678.44,654.9392" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="109" x="741.5" y="607.8008">Sends commands</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="759.5" y="621.9336">[JSON/NATS]</text><!--MD5=[5cc7364f570ef5e3b5ed64a6be12d409]
+link subscriber to mb--><path d="M110.51,565.2292 C114.07,587.2492 122.17,610.4092 139.5,625.1992 C197.2,674.4292 406.75,633.7292 479.5,655.1992 C482.94,656.2192 486.4,657.3292 489.86,658.5292 " fill="none" id="subscriber-to-mb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="497.43,661.2892,490.9437,655.728,488.8863,661.3642,497.43,661.2892" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="129" x="140.5" y="607.8008">Subscribes to events</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="168.5" y="621.9336">[JSON/NATS]</text><!--MD5=[a58b87e6c020a1e6ba89e247b0ce60de]
+link ms to restapi--><path d="M413.5,114.2092 C413.5,149.9192 413.5,201.8092 413.5,243.0092 " fill="none" id="ms-to-restapi" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="413.5,251.0992,416.5,243.0992,410.5,243.0992,413.5,251.0992" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="98" x="414.5" y="156.8008">Gathers metrics</text><text fill="#666666" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="80" x="423.5" y="170.9336">[JSON/HTTPS]</text><!--MD5=[b1394b6b1ebf1334acff3fcea9a7b2ab]
+@startuml
+!include<C4/C4_Component>
+
+title MMS Legacy Component diagram for mmsd
+
+System_Ext(subscriber, "Consumer of ProductionHub events", "Subscribes to events from the production hub")
+System_Ext(ms, "Monitoring system", "Gathers metrics")
+Container(mms, "Client App", "go-mms", "Provides a user interface to the MMS system")
+
+Container_Boundary(api, "mmsd") {
+    Component(mb, "Message Broker", "NATS", "Allows clients to subscribe to events and client apps to communicate with mmsd.")
+    Component(pes, "Persistent Event Storage", "sqlite", "Provides a persistent storage for all events.")
+    Component(restapi, "REST API", "golang", "Provides functionality for /about, /healthz, /status")
+    Component(core, "core", "golang", "Provides logic and connection control.")
+
+    Rel(core, mb, "Reads commands from private channel")
+    Rel(core, pes, "Stores events")
+    Rel(core, mb, "Publishes events")
+    Rel(restapi, core, "Fetches data")
+}
+
+Rel(mms, mb, "Sends commands", "JSON/NATS")
+Rel(subscriber, mb, "Subscribes to events", "JSON/NATS")
+Rel(ms, restapi, "Gathers metrics", "JSON/HTTPS")
+
+@enduml
+
+@startuml
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
+    FontStyle plain
+    BackgroundColor #FFFFFF
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
+    FontColor #444444
+    BorderColor #444444
+    BackgroundColor #FFFFFF
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam database<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+skinparam queue<<component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #85BBF0
+    BorderColor #78A8D8
+}
+
+skinparam rectangle<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam database<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+skinparam queue<<external_component>> {
+    StereotypeFontColor #000000
+    FontColor #000000
+    BackgroundColor #CCCCCC
+    BorderColor #BFBFBF
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+title MMS Legacy Component diagram for mmsd
+
+rectangle "==Consumer of ProductionHub events\n\n Subscribes to events from the production hub" <<external_system>> as subscriber 
+rectangle "==Monitoring system\n\n Gathers metrics" <<external_system>> as ms 
+rectangle "==Client App\n//<size:12>[go-mms]</size>//\n\n Provides a user interface to the MMS system" <<container>> as mms 
+
+rectangle "==mmsd\n<size:12>[Container]</size>" <<boundary>> as api  {
+    rectangle "==Message Broker\n//<size:12>[NATS]</size>//\n\n Allows clients to subscribe to events and client apps to communicate with mmsd." <<component>> as mb 
+    rectangle "==Persistent Event Storage\n//<size:12>[sqlite]</size>//\n\n Provides a persistent storage for all events." <<component>> as pes 
+    rectangle "==REST API\n//<size:12>[golang]</size>//\n\n Provides functionality for /about, /healthz, /status" <<component>> as restapi 
+    rectangle "==core\n//<size:12>[golang]</size>//\n\n Provides logic and connection control." <<component>> as core 
+
+    core - ->> mb : **Reads commands from private channel**
+    core - ->> pes : **Stores events**
+    core - ->> mb : **Publishes events**
+    restapi - ->> core : **Fetches data**
+}
+
+mms - ->> mb : **Sends commands**\n//<size:12>[JSON/NATS]</size>//
+subscriber - ->> mb : **Subscribes to events**\n//<size:12>[JSON/NATS]</size>//
+ms - ->> restapi : **Gathers metrics**\n//<size:12>[JSON/HTTPS]</size>//
+
+@enduml
+
+PlantUML version 1.2021.6(Fri May 14 09:09:51 CEST 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: NO
+--></g></svg>
