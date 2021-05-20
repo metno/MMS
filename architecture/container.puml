@@ -1,23 +1,25 @@
-@startuml productionHub
+@startuml
 !include <C4/C4_Container>
-!include <office/Users/user.puml>
 
-LAYOUT_LEFT_RIGHT
+title MMS Container Diagram
 
-Person(product_maintainer, "<$user> \n Product maintainer")
+left to right direction
 
-System_Boundary(production_hub, "Production Hub") {
-    Container(wm,"Workflow Manager","e.g. ecFlow, ProRad","Producer of products")
-    Container(mmsd,"mmsd","Go","MMS Daemon, core, REST API, persistent message store, NATS")
-    'Container(mb, "Message broker","NATS")
+System(production_hub, "Production hub")
+
+System_Boundary(mms, "MMS") {
+    Container(nats,"NATS JetStream","3rd party component","Persistent message queue")
+    Container(mmsd,"mmsd","Go","MMS Daemon, core, REST API")
 }
 
 System(production_hub_2,"Another Production Hub")
 System(another_system, "Another Sytem")
 
-Rel(wm,mmsd,"Registers products when finished","python-wrapper, cli")
-Rel(product_maintainer, wm, "Maintains products and configures metadata","Workflow Manager")
-Rel(another_system, mmsd, "Subscribes to events")
-Rel(production_hub_2, mmsd, "Subscribes to events")
+Rel(production_hub,mmsd,"Registers products when finished","HTTPS")
+
+Rel(another_system, mms, "Subscribes to events")
+Rel(production_hub_2, mms, "Subscribes to events")
+
+Rel(mmsd, nats, "Publishes messages for a product")
 
 @enduml

@@ -1,0 +1,23 @@
+@startuml
+!include <C4/C4_Container>
+
+title MMS Legacy Container Diagram
+
+left to right direction
+
+Person(product_maintainer, "Product maintainer")
+
+System_Boundary(production_hub, "Production Hub") {
+    Container(wm,"Workflow Manager","e.g. ecFlow, ProRad","Producer of products")
+    Container(mmsd,"mmsd","Go","MMS Daemon, core, REST API, persistent message store, NATS")
+}
+
+System(production_hub_2,"Another Production Hub")
+System(another_system, "Another Sytem")
+
+Rel(wm,mmsd,"Registers products when finished","python-wrapper, cli")
+Rel(product_maintainer, wm, "Maintains products and configures metadata","Workflow Manager")
+Rel(another_system, mmsd, "Subscribes to events")
+Rel(production_hub_2, mmsd, "Subscribes to events")
+
+@enduml

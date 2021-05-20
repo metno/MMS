@@ -1,0 +1,17 @@
+@startuml
+!include <C4/C4_Context>
+
+title MMS Legacy Context Diagram
+
+Person(product_maintainer, "Product maintainer")
+
+System(production_hub, "Production Hub","e.g. NWP ecFlow on PPI")
+
+System_Ext(vis, "Visualisation UI / Data Service")
+System_Ext(ppi, "PPI")
+
+Rel(product_maintainer, production_hub, "Maintains products and configures metadata")
+Rel(vis, production_hub, "Subscribes to product events")
+Rel(production_hub, ppi, "Runs on")
+
+@enduml
