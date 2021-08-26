@@ -1,16 +1,22 @@
-@startuml integratedP2P
+@startuml
 !include <C4/C4_Context>
-!include <office/Users/user.puml>
 
-Person(product_maintainer, "<$user> \n Product maintainer")
+title MMS Context Diagram
 
-System(production_hub, "Production Hub","e.g. NWP ecFlow on PPI")
+Person(product_maintainer, "Product maintainer")
 
-System_Ext(vis, "Visualisation UI / Data Service")
+
+System(mms, "MMS")
+
+System_Ext(vis, "Another Production Hub, Visualisation UI or Data Service")
 System_Ext(ppi, "PPI")
+System_Ext(kubernetes, "Kubernetes")
+System_Ext(production_hub, "Production Hub","e.g. NWP ecFlow on PPI, rcron...")
 
 Rel(product_maintainer, production_hub, "Maintains products and configures metadata")
-Rel(vis, production_hub, "Subscribes to product events")
+Rel(vis, mms, "Subscribes to product events")
 Rel(production_hub, ppi, "Runs on")
+Rel(mms, kubernetes, "Runs on")
+Rel(production_hub, mms, "Posts information about new products")
 
 @enduml
