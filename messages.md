@@ -17,7 +17,7 @@ Implemented in [go-mms](https://github.com/metno/go-mms/blob/79a925c16b28d944c2a
 | Counter | `Counter` out of `TotalCount` for products that are part of a collection of products |
 | TotalCount | `TotalCount` of products in a collection of products |
 | RefTime | For forecasting models. The forecast reference time in NWP is the "data time", the time of the analysis from which the forecast was made. |
-| CreatedAt |  timestamp of the produced file (object) |
+| CreatedAt |  timestamp of event creation |
 | NextEventAt | timestamp of the next event |
 
 ## Other Events
