@@ -12,6 +12,7 @@ Implemented in [go-mms](https://github.com/metno/go-mms/blob/79a925c16b28d944c2a
 | --- | --- |
 | Product  | File (object) name without timestamp. E.g. `meps_det_2_5km.ncml` or `met_forecast_1_0km_nordic.zarr`  |
 | JobName | For larger production units, a more detailed identification of where the product comes from (e.g. ecFlow job) |
+| MMD | MMD metadata string |
 | ProductLocation | Full path to the file or object. E.g. `/lustre/storeB/project/metproduction/products/meps/meps_det_2_5km_20210828T09Z.ncml` or `https://s3.rgw-test.met.no/yr-maps-test/meps/2021-08-28T10:00:00Z` |
 | ProductionHub | Some identification of the production unit of this product (e.g. ecflow-nwp@prod-serverb) |
 | Counter | `Counter` out of `TotalCount` for products that are part of a collection of products |
